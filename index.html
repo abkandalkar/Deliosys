@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deliosys</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      
+      .header {
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+        padding: 3vh 15vw 1vh;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+      }
+      .nav-item {
+        list-style: none;
+        display: flex;
+        gap: 2vw;
+        font-size: large;
+      }
+
+      .logo{
+        width:7vw;
+        display: inline;
+        padding: 12px;
+      }
+    nav > img{
+    width: 8vw;
+    position: relative;
+    z-index: 10;
+    }
+      .navlogo {
+        list-style: none;
+        display: flex;
+        gap: 2vw;
+        height: auto;
+      }
+      .earth-logo,
+      .search-logo,
+      .msg-logo {
+        width: 2vw;
+      }
+      .section{
+        background-color: #e6ebf5;
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="header">
+            <img src="/assest/Deliosys-logo.jpeg" alt="">
+        <ul class="nav-item">
+          <li class="nav-item-capabilities">capabilities</li>
+          <li class="nav-item-industries">industries</li>
+          <li class="nav-item-Ecosystem">Ecosystem</li>
+          <li class="nav-item-About-us">About-us</li>
+          <li class="nav-item-Resource">Resource</li>
+          <li class="nav-item-careers">careers</li>
+        </ul>
+        <ul class="navlogo">
+          <li class="earth-logo">
+            <img src="/assest/earth-logo.svg" alt="" />
+          </li>
+          <li class="search-logo">
+            <img src="/assest/search-logo.svg" alt="" />
+          </li>
+          <li class="msg-logo"><img src="/assest/msg-logo.svg" alt="" /></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="section">
+        <!-- <img src="/assest/bg-temp.jpg" alt=""> -->
+    </div>
+  </body>
 </html>
