@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Image and Text</title>
+    <style>
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: fixed;
+        width: 90%;
+        margin: 0vh 4vw;
+        background-color: white;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .logo-company {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-company img {
+        width: 9vw;
+        padding: 1px;
+        height: 5vh;
+      }
+
+      nav {
+        display: flex;
+        gap: 15px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1.1rem;
+      }
+
+      nav a:hover {
+        color: #1a3d91;
+      }
+
+      .nav-logo {
+        display: flex;
+        gap: 1vw;
+      }
+
+      .earth-logo,
+      .search-logo,
+      .msg-logo {
+        width: 2vw;
+        padding-top: 5px;
+      }
+
+      .menu-icon-nav {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      .mobile-nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        border: 1px solid #ddd;
+        padding: 10px 20px;
+        z-index: 1000;
+      }
+
+      .mobile-nav a {
+        text-align: left;
+        padding: 5px 0;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          justify-content: space-between;
+          position: fixed;
+          width: 80%;
+        }
+
+        .logo-company {
+          order: 2;
+        }
+
+        .logo-company img {
+          width: 20vw;
+          height: 5vh;
+        }
+
+        .menu-icon-nav {
+          display: block;
+          order: 1;
+          margin-right: 2vw;
+        }
+
+        nav {
+          display: none;
+        }
+
+        .mobile-nav.active {
+          display: flex;
+        }
+
+        .nav-logo {
+          flex-wrap: wrap;
+          order: 3;
+          padding: 1vh 1vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="menu-icon-nav" onclick="toggleMenu()">☰</div>
+      <div class="logo-company">
+        <img src="/assest/Deliosys-logo.jpeg" alt="Company-Logo" />
+        <!-- <h1>SHIPDARTEXPRESS</h1> -->
+      </div>
+      <nav>
+        <a href="">Capabilities</a>
+        <a href="">Industries</a>
+        <a href="">Ecosystem</a>
+        <a href="">About-us</a>
+        <a href="">Resource</a>
+      </nav>
+      <div class="mobile-nav" id="mobileNav">
+        <a href="#">Capabilities</a>
+        <a href="">Industries</a>
+        <a href="">Ecosystem</a>
+        <a href="">About-us</a>
+        <a href="">Resource</a>
+      </div>
+      <div class="nav-logo">
+        <a href="#" class="earth-logo"><img src="/assest/earth-logo.svg" /></a>
+        <a href="#" class="search-logo"
+          ><img src="/assest/search-logo.svg"
+        /></a>
+        <a href="#" class="msg-logo"><img src="/assest/msg-logo.svg" /></a>
+      </div>
+    </header>
+    <script>
+      function toggleMenu() {
+        const mobileNav = document.getElementById("mobileNav");
+        mobileNav.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
