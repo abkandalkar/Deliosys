@@ -1,182 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Featured Trends and Insights</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Navbar</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        padding: 20px;
-        background-color: #f9f9f9;
-      }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-      .container-component {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-      }
+.logo {
+  font-size: 20px;
+  color: #1e56a0;
+  font-weight: bold;
+}
 
-      .card-component {
-        background: white;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        flex: 1 1 calc(300px - 20px);
-        max-width: 300px;
-        display: flex;
-        flex-direction: column;
-      }
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
 
-      .card-component img {
-        width: 100%;
-        height: auto;
-      }
+.nav-links li {
+  position: relative;
+  margin: 0 15px;
+}
 
-      .card-component-content {
-        padding: 16px;
-      }
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
 
-      .card-component-content h3 {
-        font-size: 18px;
-        margin-bottom: 10px;
-        color: #333;
-      }
+.nav-links .dropdown:hover .dropdown-menu {
+  display: block;
+}
 
-      .card-component-content p {
-        font-size: 14px;
-        color: #666;
-        margin-bottom: 10px;
-        word-wrap: break-word;
-      }
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  z-index: 10;
+}
 
-      .card-component-content a {
-        text-decoration: none;
-        color: #007bff;
-        font-weight: bold;
-        margin-top: auto;
-      }
+.dropdown-menu li {
+  padding: 10px 20px;
+  white-space: nowrap;
+}
 
-      .events-component {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        flex: 1 1 200px;
-        max-width: 200px;
-      }
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+}
 
-      .event-card-component {
-        background: white;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 16px;
-        text-align: center;
-      }
+.dropdown-menu li:hover {
+  background-color: #f5f5f5;
+}
 
-      .event-card-component h4 {
-        font-size: 16px;
-        color: #333;
-        margin-bottom: 10px;
-      }
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
-      .event-card-component a {
-        text-decoration: none;
-        color: #007bff;
-        font-weight: bold;
-      }
+.icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
-      @media (max-width: 768px) {
-        .container-component {
-          flex-direction: column;
-          align-items: center;
-        }
+.icon.globe {
+  background-image: url('https://example.com/globe-icon.svg');
+}
 
-        .card-component {
-          max-width: 90%;
-        }
+.icon.search {
+  background-image: url('https://example.com/search-icon.svg');
+}
 
-        .card-component-content h3 {
-          font-size: 16px;
-        }
+.icon.mail {
+  background-image: url('https://example.com/mail-icon.svg');
+}
 
-        .card-component-content p {
-          font-size: 12px;
-        }
-
-        .events-component {
-          flex-direction: row;
-          justify-content: space-around;
-          max-width: 100%;
-        }
-
-        .event-card-component {
-          flex: 1 1 auto;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="component">
-      <h1>Featured Trends and Insights</h1>
-      <div class="container-component">
-        <!-- Article Cards -->
-        <div class="card-component">
-          <img
-            src="https://via.placeholder.com/300x150"
-            alt="Diverse Workforce"
-          />
-          <div class="card-component-content">
-            <h3>
-              Why is a diverse workforce crucial for driving creativity and
-              innovation?
-            </h3>
-            <p>
-              Susan Goffee highlights the importance of inclusive practices in
-              adopting diverse talent, driving creativity, and success.
-            </p>
-            <a href="#">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="card-component">
-          <img src="https://via.placeholder.com/300x150" alt="AI and GenAI" />
-          <div class="card-component-content">
-            <h3>
-              It's time to notice: The radical shift in service models driven by
-              AI and GenAI
-            </h3>
-            <p>
-              Discover how AI and GenAI tools are revolutionizing service models
-              across industries.
-            </p>
-            <a href="#">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Events Section -->
-        <div class="events-component">
-          <div class="event-card-component">
-            <h4>World Economic Forum 2025</h4>
-            <p>January 20-24 | Davos</p>
-            <a href="#">Learn more &rarr;</a>
-          </div>
-          <div class="event-card-component">
-            <h4>HCLTech at Cisco Live 2025</h4>
-            <p>February 10-14 | Amsterdam</p>
-            <a href="#">Learn more &rarr;</a>
-          </div>
-        </div>
-      </div>
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">HCLTech</div>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a href="#">Capabilities</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Capability 1</a></li>
+          <li><a href="#">Capability 2</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Industries</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Industry 1</a></li>
+          <li><a href="#">Industry 2</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Ecosystem</a></li>
+      <li class="dropdown">
+        <a href="#">About Us</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Our Values</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="#">Careers</a></li>
+    </ul>
+    <div class="icons">
+      <span class="icon globe"></span>
+      <span class="icon search"></span>
+      <span class="icon mail"></span>
     </div>
-  </body>
+  </nav>
+  <script src="script.js"></script>
+</body>
 </html>
