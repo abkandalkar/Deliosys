@@ -3,128 +3,131 @@
   padding: 0;
 }
 
-.header {
+main {
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1vh 10vw;
-  /* margin:0% 15%; */
-  width: 80%;
-  position: fixed;
-  z-index: 2;
-  /* margin: 0vh 4vw; */
-  background-color: white;
-  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+  background-color: #ffffff;
 }
 
-.logo-company {
+.logo {
   display: flex;
   align-items: center;
 }
 
-.logo-company img {
-  width: 9vw;
-  padding: 1px;
-  height: 5vh;
+.logo img {
+  height: 30px;
+  margin-right: 0.5rem;
 }
 
 nav {
   display: flex;
-  gap: 15px;
+  align-items: center;
 }
 
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-size: 1.1rem;
-}
-
-nav a:hover {
-  color: #1a3d91;
-}
-
-.nav-logo {
+nav ul {
   display: flex;
-  gap: 1vw;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.earth-logo,
-.search-logo,
-.msg-logo {
-  width: 2vw;
-  padding-top: 5px;
+nav ul li {
+  margin: 0 1rem;
+  position: relative;
 }
 
-.menu-icon-nav {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
+nav ul li a {
+  text-decoration: none;
   color: black;
 }
 
-.mobile-nav {
+nav ul li:hover .dropdown {
+  display: block;
+  z-index: 2;
+}
+
+.dropdown {
   display: none;
-  flex-direction: column;
-  gap: 10px;
-  background-color: #fff;
   position: absolute;
-  top: 60px;
+  top: 100%;
   left: 0;
-  right: 0;
-  border: 1px solid #ddd;
-  padding: 10px 20px;
-  z-index: 1000;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
 }
 
-.mobile-nav a {
-  text-align: left;
-  padding: 5px 0;
-  border-bottom: 1px solid #f0f0f0;
+.dropdown a {
+  display: block;
+  margin: 0.5rem 0;
+  color: black;
 }
 
+.menu-toggle {
+  display: none;
+  height: 5vh;
+  flex-direction: column;
+  cursor: pointer;
+  order: -1;
+}
+
+.menu-toggle span {
+  background: black;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+}
+
+.msg-logo {
+  width: 5vh;
+}
+
+.down-arrow{
+  height: 1vh;
+}
+
+.menu-button{
+  height: 4vh;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .header {
-    justify-content: space-between;
-    position: fixed;
-    z-index: 2;
-    width: 80%;
-  }
-
-  .logo-company {
-    order: 2;
-  }
-
-  .logo-company img {
-    width: 20vw;
-    height: 5vh;
-  }
-
-  .menu-icon-nav {
-    display: block;
-    order: 1;
-    margin-right: 2vw;
+  .menu-toggle {
+    display: flex;
   }
 
   nav {
     display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 10;
   }
 
-  .mobile-nav.active {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav.active {
     display: flex;
   }
 
-  .nav-logo {
-    flex-wrap: wrap;
-    order: 3;
-    padding: 1vh 1vw;
-  }
-
-  .earth-logo,
-  .search-logo,
   .msg-logo {
-    width: 5vw;
+    width: 5vh;
   }
 }
+
+/*  */
 
 
 .slider {
@@ -454,12 +457,11 @@ nav a:hover {
 }
 
 /* FAQ */
-
 .faq-container {
   max-width: 85%;
   margin: 50px auto;
   padding: 20px;
-  background: linear-gradient(to bottom, #3c287f, #9182e6, #82b6e6);;
+  background: linear-gradient(to bottom, #3c287f, #9182e6, #82b6e6);
   border-radius: 8px;
   color: #ffffff;
   justify-content: space-between;
@@ -485,19 +487,14 @@ nav a:hover {
   cursor: pointer;
   padding: 15px;
   margin: 0;
-  cursor: pointer;
   background-color: transparent;
   border: none;
   width: 100%;
   text-align: left;
   display: flex;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 2px solid rgba(196, 193, 193, 0.619);
   justify-content: space-between;
   align-items: center;
-  gap: 0;
+  border-bottom: 2px solid rgba(196, 193, 193, 0.619);
 }
 
 .faq-answer {
@@ -505,11 +502,24 @@ nav a:hover {
   padding: 15px;
   margin: 0;
   display: none;
+  overflow: hidden;
   background-color: transparent;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.faq-answer.open {
+  display: block;
+  max-height: 300px;
+  opacity: 1;
+}
+
+.faq-answer.closed {
+  max-height: 0;
+  opacity: 0;
 }
 
 .faq-question:hover {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .faq-question:focus {
@@ -655,6 +665,13 @@ div .tab {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
+  max-width: 85%;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  color: #ffffff;
+  justify-content: space-between;
+
 }
 
 .testimonial {
@@ -728,21 +745,111 @@ div .tab {
   }
 }
 
-.img-carrier{
+.img-carrier {
   text-align: center;
   margin: 6vh 0vw
 }
-.img-carrier img{
+
+.img-carrier img {
   border-radius: 9px;
   width: 80vw;
   height: 100%;
 }
-  
+
 /* image contact us */
 
-.img-contact-us img{
+.img-carrier {
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  background: url('/assest/Image-Carrer.png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-carrier {
+  text-align: center;
+  /* background: rgba(255, 255, 255, 0.8); Semi-transparent white background */
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.content-carrier h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.content-carrier p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.carrier-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #6c63ff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.carrier-btn:hover {
+  background-color: #4b43c6;
+}
+
+/* Contact-us */
+
+.container-contactus {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.background-image-contactus {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contact-button-contactus {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  padding: 12px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 35px;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.contact-button-contactus:hover {
+  background-color: #0056b3;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .contact-button-contactus {
+    bottom: 5%;
+    right: 5%;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-button-contactus {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
 }
 
 /* footer */

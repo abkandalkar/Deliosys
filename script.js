@@ -1,9 +1,12 @@
 // header
 
-function toggleMenu() {
-  const mobileNav = document.getElementById("mobileNav");
-  mobileNav.classList.toggle("active");
-};
+const menuToggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('nav');
+
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+
 
 
 // slide show 
@@ -34,28 +37,28 @@ setInterval(showNextSlide, 5000); // Rotate every 5 seconds
 
 
 // FAQ
-
 const questions = document.querySelectorAll(".faq-question");
 
 questions.forEach((question) => {
   question.addEventListener("mouseover", () => {
     const answer = question.nextElementSibling;
 
-    // Hide all other answers
-    document
-      .querySelectorAll(".faq-answer")
-      .forEach((a) => (a.style.display = "none"));
+    // Close other answers
+    document.querySelectorAll(".faq-answer").forEach((a) => {
+      if (a !== answer) {
+        a.classList.remove("open");
+        a.classList.add("closed");
+      }
+    });
 
-    // Show the hovered question's answer
-    answer.style.display = "block";
-  });
-});
-
-// Optional: Hide the answer when the mouse leaves the question
-questions.forEach((question) => {
-  question.addEventListener("mouseout", () => {
-    const answer = question.nextElementSibling;
-    answer.style.display = "none";
+    // Toggle current answer
+    if (answer.classList.contains("open")) {
+      answer.classList.remove("open");
+      answer.classList.add("closed");
+    } else {
+      answer.classList.remove("closed");
+      answer.classList.add("open");
+    }
   });
 });
 
