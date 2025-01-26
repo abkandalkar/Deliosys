@@ -47,6 +47,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: black;
+  font-size: 18px;
 }
 
 nav ul li:hover .dropdown {
@@ -89,11 +90,11 @@ nav ul li:hover .dropdown {
   width: 5vh;
 }
 
-.down-arrow{
+.down-arrow {
   height: 1vh;
 }
 
-.menu-button{
+.menu-button {
   height: 4vh;
 }
 
@@ -409,6 +410,7 @@ nav ul li:hover .dropdown {
 .box-expertise {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-basis: calc(50% - 20px);
   background-color: #fff;
   border: 1px solid #ddd;
@@ -424,14 +426,14 @@ nav ul li:hover .dropdown {
 }
 
 .box-expertise img {
-  width: 100%;
+  width: 50%;
   height: auto;
   object-fit: cover;
-  transition: transform 2s ease;
+  transition: transform 3s ease;
 }
 
 .box-expertise:hover img {
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 
 .info {
@@ -745,64 +747,119 @@ div .tab {
   }
 }
 
-.img-carrier {
-  text-align: center;
-  margin: 6vh 0vw
-}
-
-.img-carrier img {
-  border-radius: 9px;
-  width: 80vw;
-  height: 100%;
-}
-
-/* image contact us */
-
-.img-carrier {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: url('/assest/Image-Carrer.png') no-repeat center center/cover;
+/* Careers home */
+.careers-home {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  background-color: #f4f4f4;
 }
 
-.content-carrier {
-  text-align: center;
-  /* background: rgba(255, 255, 255, 0.8); Semi-transparent white background */
-  padding: 20px 40px;
-  border-radius: 10px;
-}
-
-.content-carrier h1 {
-  font-size: 3rem;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.content-carrier p {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.carrier-btn {
+.careers-container {
+  position: relative;
   display: inline-block;
-  text-decoration: none;
-  background-color: #6c63ff;
+}
+
+.careers-background-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.careers-overlay {
+  position: absolute;
+  top: 10%;
+  left: 5%;
   color: white;
-  padding: 10px 20px;
-  font-size: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.careers-overlay h1 {
+  margin: 0;
+  margin-top: 10vh;
+  font-size: 5rem;
+  color: #adcaf1;
+}
+
+.careers-overlay p {
+  margin: 0.5rem 0 0 0;
+  font-size: 2rem;
+  padding: 2vh 10vh 5px 5px;
+}
+
+.careers-button {
+  position: absolute;
+  bottom: 25%;
+  left: 5%;
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  font-size: 2rem;
+  border-radius: 15px;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: all 0.3s ease;
 }
 
-.carrier-btn:hover {
-  background-color: #4b43c6;
+.careers-button:hover {
+  background-color: #0056b3;
+  opacity: 1;
 }
 
-/* Contact-us */
+@media (max-width: 1080px){
+  .careers-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .careers-overlay p {
+    font-size: 0.9rem;
+  }
+
+} 
+
+
+@media (max-width: 768px) {
+  .careers-overlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .careers-overlay p {
+    font-size: 1rem;
+  }
+
+  .careers-button {
+    font-size: 1rem;
+    padding: 10px 15px;
+    bottom: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .careers-overlay h1 {
+    font-size: 1.2rem;
+    margin: 0;
+
+  }
+
+  .careers-overlay p {
+    font-size: 0.7rem;
+    padding: 0;
+  }
+
+  .careers-button {
+    font-size: 12px;
+    padding: 8px 12px;
+    
+  }
+}
+
+/* Contact-us Home */
 
 .container-contactus {
   position: relative;
@@ -818,13 +875,13 @@ div .tab {
 
 .contact-button-contactus {
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   right: 10%;
   padding: 12px 20px;
   background-color: #007BFF;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 35px;
   cursor: pointer;
   opacity: 0.9;
@@ -944,6 +1001,24 @@ div .tab {
 
 .footer-bottom p {
   margin: 5px 0;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-bottom: 15px;
+}
+
+.footer-icons a img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease;
+}
+
+.footer-icons a img:hover {
+  filter: brightness(1);
 }
 
 .container1 {
