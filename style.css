@@ -86,7 +86,7 @@ nav ul li:hover .dropdown {
   margin: 4px 0;
 }
 
-.msg-logo {
+.msg-logo , .earth-logo {
   width: 5vh;
 }
 
@@ -123,7 +123,7 @@ nav ul li:hover .dropdown {
     display: flex;
   }
 
-  .msg-logo {
+  .msg-logo, .earth-logo {
     width: 5vh;
   }
 }
@@ -132,7 +132,6 @@ nav ul li:hover .dropdown {
 
 
 .slider {
-  position: relative;
   width: 100%;
   height: 90vh;
   overflow: hidden;
@@ -167,11 +166,13 @@ nav ul li:hover .dropdown {
 
 .dots {
   position: absolute;
-  bottom: 20px;
+  bottom: 7%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
+  
+  
 }
 
 .dot {
@@ -181,6 +182,7 @@ nav ul li:hover .dropdown {
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  
 }
 
 .dot.active {
@@ -863,7 +865,6 @@ div .tab {
 
 .container-contactus {
   position: relative;
-  display: inline-block;
   max-width: 100%;
 }
 
