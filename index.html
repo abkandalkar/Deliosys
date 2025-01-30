@@ -11,21 +11,22 @@
 <body>
   <header>
     <div class="logo">
-      <img src="/assest/Deliosys-logo.jpeg" alt="Deliosys">
+      <img src="/assest/logo.svg" alt="Deliosys">
       <!-- <span>Deliosys</span> -->
     </div>
     <div class="menu-toggle" id="menu-toggle">
       <!-- <span> </span>
           <span> </span>
           <span> l</span> -->
-      <img class="menu-button" src="/assest/menu-button.svg" alt="">
+      <img style="filter: invert(100);" class="menu-button" src="/assest/menu-button.svg" alt="">
     </div>
     <nav id="nav">
 
       <ul>
         <li><a href="#">Home</a></li>
         <li>
-          <a href="#">Services <img class="down-arrow" src="/assest/down-arrow.svg" alt=""></a>
+          <a href="#">Services <img style="filter: invert(100);" class="down-arrow" src="/assest/down-arrow.svg"
+              alt=""></a>
           <div class="dropdown">
             <a href="#">Web Development</a>
             <a href="#">Android & IOS Developmen</a>
@@ -50,65 +51,81 @@
   <main>
     <div class="slider">
       <div class="slides">
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
+        <div class="slide">
+          <img src="/assest/Slide1.png" alt="Image 1" />
+          <!-- <div class="slide-text">This is the first slide</div> -->
+        </div>
+        <div class="slide">
+          <img src="/assest/Slide1.png" alt="Image 2" />
+          <!-- <div class="slide-text">This is the second slide</div> -->
+        </div>
+        <div class="slide">
+          <img src="/assest/Slide1.png" alt="Image 3" />
+          <!-- <div class="slide-text">This is the third slide</div> -->
+        </div>
       </div>
-      <div class="dots">
-        <div class="dot active" data-index="0"></div>
-        <div class="dot" data-index="1"></div>
-        <div class="dot" data-index="2"></div>
+      <div class="navigation-circle">
+        <div class="nav-circle active" data-slide="0"></div>
+        <div class="nav-circle" data-slide="1"></div>
+        <div class="nav-circle" data-slide="2"></div>
       </div>
     </div>
-    <div class="expertise">
-      <div class="container-expertise">
-        <!-- Box 1 -->
-        <div class="box-expertise">
-          <img src="/assest/web-Dev.svg" alt="Image 1" />
-          <div class="info">
-            <h3>Web Development</h3>
-            <p>This is a description for Image 1.</p>
-          </div>
-        </div>
 
-        <!-- Box 2 -->
-        <div class="box-expertise">
-          <img src="/assest/App-Dev.svg" alt="Image 2" />
-          <div class="info">
-            <h3>Android & IOS Development</h3>
-            <p>This is a description for Image 2.</p>
-          </div>
-        </div>
 
-        <!-- Box 3 -->
-        <div class="box-expertise">
-          <img src="/assest/Cloud-Infra.svg" alt="Image 3" />
-          <div class="info">
-            <h3>Cloud Infrastructure</h3>
-            <p>This is a description for Image 3.</p>
-          </div>
-        </div>
+    <div class="expertise-section">
 
-        <!-- Box 4 -->
-        <div class="box-expertise">
-          <img src="/assest/Cyber-Security.svg" alt="Image 4" />
-          <div class="info">
-            <h3>CyberSecurity</h3>
-            <p>This is a description for Image 4.</p>
+      <h1 class="our-expertise">Our Areas Of Expertise</h1>
+      <div class="expertise">
+
+        <div class="container-expertise">
+          <!-- Box 1 -->
+          <div class="box-expertise">
+            <img src="/assest/web-Dev.svg" alt="Image 1" />
+            <div class="info">
+              <h3>Web Development</h3>
+              <p>This is a description for Image 1.</p>
+            </div>
           </div>
-        </div>
-        <div class="box-expertise">
-          <img src="/assest/bg-temp.jpg" alt="Image 4" />
-          <div class="info">
-            <h3>Software Testing</h3>
-            <p>This is a description for Image 4.</p>
+
+          <!-- Box 2 -->
+          <div class="box-expertise">
+            <img src="/assest/App-Dev.svg" alt="Image 2" />
+            <div class="info">
+              <h3>Android & IOS Development</h3>
+              <p>This is a description for Image 2.</p>
+            </div>
           </div>
-        </div>
-        <div class="box-expertise">
-          <img src="/assest/HR-Consultancy.svg" alt="Image 4" />
-          <div class="info">
-            <h3>HR Consultancy</h3>
-            <p>This is a description for Image 4.</p>
+
+          <!-- Box 3 -->
+          <div class="box-expertise">
+            <img src="/assest/Cloud-Infra.svg" alt="Image 3" />
+            <div class="info">
+              <h3>Cloud Infrastructure</h3>
+              <p>This is a description for Image 3.</p>
+            </div>
+          </div>
+
+          <!-- Box 4 -->
+          <div class="box-expertise">
+            <img src="/assest/Cyber-Security.svg" alt="Image 4" />
+            <div class="info">
+              <h3>CyberSecurity</h3>
+              <p>This is a description for Image 4.</p>
+            </div>
+          </div>
+          <div class="box-expertise">
+            <img src="/assest/Testing.svg" alt="Image 4" />
+            <div class="info">
+              <h3>Software Testing</h3>
+              <p>This is a description for Image 4.</p>
+            </div>
+          </div>
+          <div class="box-expertise">
+            <img src="/assest/HR-Consultancy.svg" alt="Image 4" />
+            <div class="info">
+              <h3>HR Consultancy</h3>
+              <p>This is a description for Image 4.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -119,7 +136,7 @@
         <div class="purpose-title">Our Purpose</div>
         <p>To bring together the best of technology and our people to supercharge progress.</p>
         <div class="quote-container">
-          <img src="/assest/Passport_photo.png" alt="CEO">
+          <!-- <img src="/assest/Passport_photo.png" alt="CEO"> -->
           <div class="quote-text">
             <blockquote>
               "We look forward to supercharging our growth with optimism and confidence, ready to seize the many
@@ -131,82 +148,111 @@
           </div>
         </div>
       </div>
+
+      <div class="purpose-section">
+        <div class="purpose-title">Our Vision</div>
+        <p>To bring together the best of technology and our people to supercharge progress.</p>
+        <div class="quote-container">
+          <!-- <img src="/assest/Passport_photo.png" alt="CEO"> -->
+          <div class="quote-text">
+            <blockquote>
+              "We look forward to supercharging our growth with optimism and confidence, ready to seize the many
+              opportunities ahead. Our growth strategy for the emerging digital and AI future is built on five strategic
+              objectives."
+            </blockquote>
+            <div class="author">C Vijayakumar<br>CEO & Managing Director | HCLTech</div>
+            <a href="#">Our five strategic objectives →</a>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div class="faq-container">
-      <h1 class="faq-title">Frequently Asked Questions</h1>
+      <h1 class="faq-title">We Have For You</h1>
       <div class="faq-leftitem">
         <div class="faq-item">
           <button class="faq-question">
-            How can I track my shipment with Shipdartexpress?
+            Craft Your Dream Website: We build visually stunning, user-friendly websites that seamlessly integrate with
+            your brand identity and business goals.
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer">
-            You can easily track your shipment by entering the tracking number
-            provided by Shipdartexpress on our website's tracking page. Our
-            system provides real-time updates on the status and location of your
-            package.
+            Our expert website developers leverage cutting-edge technologies to create responsive, SEO-optimized
+            websites that deliver exceptional user experiences across all devices. From e-commerce platforms to
+            content-rich websites, we'll guide you through the entire process, ensuring your website reflects your
+            brand's essence and drives results.App Development (iOS/Android)
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            What is the estimated delivery time for Shipdartexpress courier
-            services?
+            Native Apps that Captivate Users: We develop high-performance, native mobile applications for iOS and
+            Android that engage your audience and elevate your brand.
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer">
-            Delivery times vary depending on the destination and the shipping
-            option selected. Please refer to our website for specific delivery
-            estimates.
+            Our skilled app developers combine their expertise in user interface (UI) design, user experience (UX)
+            principles, and platform-specific programming languages to create intuitive, feature-rich apps that stand
+            out in the competitive app stores. We'll work closely with you to understand your target audience and
+            business objectives, ensuring your app delivers a seamless and engaging user experience.
+            Cloud Infrastructure
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Scalable Cloud Solutions: We design and implement robust cloud infrastructure solutions that empower your
+            business with agility, security, and cost-efficiency.
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            Our cloud infrastructure specialists leverage their in-depth knowledge of leading cloud platforms (AWS,
+            Azure, GCP) to tailor solutions that meet your specific needs. We'll help you migrate your workloads to the
+            cloud, optimize performance, and ensure scalability to support your business growth.
+            Cybersecurity
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            What should I do if my shipment is delayed?
+            Fortify Your Digital Defenses: We provide comprehensive cybersecurity services to safeguard your website,
+            applications, and data from evolving threats.
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer">
-            If your shipment is delayed, please contact our customer support
-            team for assistance. You can also check the tracking page for
-            real-time updates.
+            Our cybersecurity experts offer a range of services, including vulnerability assessments, penetration
+            testing, security awareness training, and incident response planning. We'll work with you to identify and
+            address potential security risks, ensuring your digital assets are protected.
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            Do you offer international shipping services?
+            Build a Thriving Workforce: We offer strategic HR consultancy services to help you attract, retain, and
+            develop top talent.
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer">
-            Yes, we offer international shipping services to a wide range of
-            destinations. Please visit our website for more information.
+            Our experienced HR consultants provide guidance on talent acquisition, compensation and benefits,
+            performance management, and employee relations. We'll help you create a positive work environment that
+            fosters employee engagement and drives business success.
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            How can I contact Shipdartexpress customer support?
+            Deliver Flawless Software: We provide comprehensive software testing services to ensure your applications
+            are high-quality, reliable, and meet your user expectations.
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer">
-            You can contact our customer support team via email or phone. Visit
-            our Contact Us page for the details.
+            Our skilled software testers employ a range of testing methodologies, including functional testing,
+            non-functional testing, and security testing. We'll work with you to identify and address software defects
+            early in the development process, minimizing risks and ensuring a smooth launch.
           </div>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-question">
-            What types of packages does Shipdartexpress ship?
-            <i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="faq-answer">
-            We ship a variety of packages, including documents, parcels, and
-            freight. Please check our website for more details on package types
-            and restrictions.
-          </div>
-        </div>
+
       </div>
     </div>
 
@@ -254,11 +300,7 @@
     <div class="careers-home">
       <div class="careers-container">
         <!-- Background Image -->
-        <img
-          src="/assest/Image-Careers.png"
-          alt="Background Image"
-          class="careers-background-image"
-        />
+        <img src="/assest/Image-Careers.png" alt="Background Image" class="careers-background-image" />
 
         <!-- Heading and Subtext Overlay -->
         <div class="careers-overlay">
@@ -271,10 +313,7 @@
         </div>
 
         <!-- Button -->
-        <button
-          class="careers-button"
-          onclick="window.location.href='careers.html'"
-        >
+        <button class="careers-button" onclick="window.location.href='careers.html'">
           Visit our Careers page
         </button>
       </div>
@@ -302,8 +341,8 @@
             <li><a href="">About-Us</a></li>
             <li><a href="">Carrier</a></li>
             <li><a href="">Contact-us</a></li>
-        </ul>
-        
+          </ul>
+
         </div>
         <div class="footer-section">
           <h3>Services</h3>

@@ -10,30 +10,43 @@ menuToggle.addEventListener('click', () => {
 
 
 // slide show 
-const slides = document.querySelector('.slides');
-const dots = document.querySelectorAll('.dot');
-let currentIndex = 0;
-const totalSlides = dots.length;
+let currentSlide = 0;
+const slides = document.querySelector(".slides");
+const slideCount = document.querySelectorAll(".slide").length;
+const navCircles = document.querySelectorAll(".nav-circle");
 
-const updateSlider = (index) => {
-  slides.style.transform = `translateX(-${index * 100}%)`;
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[index].classList.add('active');
-};
+function showSlide(index) {
+  if (index >= slideCount) {
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = slideCount - 1;
+  } else {
+    currentSlide = index;
+  }
 
-const showNextSlide = () => {
-  currentIndex = (currentIndex + 1) % totalSlides;
-  updateSlider(currentIndex);
-};
+  const offset = -currentSlide * 100;
+  slides.style.transform = `translateX(${offset}%)`;
 
-dots.forEach(dot => {
-  dot.addEventListener('click', (e) => {
-    currentIndex = parseInt(e.target.dataset.index);
-    updateSlider(currentIndex);
+  navCircles.forEach((circle, idx) => {
+    circle.classList.toggle("active", idx === currentSlide);
+  });
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function autoSlide() {
+  setInterval(nextSlide, 3000); // Change slide every 3 seconds
+}
+
+navCircles.forEach((circle, index) => {
+  circle.addEventListener("click", () => {
+    showSlide(index);
   });
 });
 
-setInterval(showNextSlide, 5000); // Rotate every 5 seconds
+autoSlide(); // Start automatic sliding
 
 
 // FAQ
