@@ -197,6 +197,7 @@ nav ul li:hover .dropdown {
 .container-p {
   padding: 12vh 1vw;
   display: flex;
+  gap:3vw;
   background: linear-gradient(135deg, #3c287f, #9182e6, #82b6e6);
 }
 
@@ -769,54 +770,64 @@ div .tab {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f4f4f4;
+  justify-content: center;
+  height: 80vh; /* Ensure full height */
 }
 
 .careers-container {
   position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
 
 .careers-background-image {
   display: block;
-  width: auto;
+  width: 70%; /* Reduce the size of the image */
   height: auto;
+  border-radius: 15px;
   max-width: 100%;
+  margin: auto;
 }
 
 .careers-overlay {
   position: absolute;
-  top: 10%;
-  left: 5%;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center it */
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  text-align: left;
+  padding-left: 15vw;
+  width: 80%;
 }
 
 .careers-overlay h1 {
   margin: 0;
-  margin-top: 10vh;
-  font-size: 5rem;
+  font-size: 3rem; /* Adjust for better fit */
   color: #adcaf1;
 }
 
 .careers-overlay p {
   margin: 0.5rem 0 0 0;
-  font-size: 2rem;
-  padding: 2vh 10vh 5px 5px;
+  font-size: 1.5rem;
+  padding: 0;
 }
 
 .careers-button {
-  position: absolute;
-  bottom: 25%;
-  left: 5%;
-  padding: 12px 20px;
+  position: relative; /* Remove absolute positioning */
+  margin-top: 20px; /* Add spacing */
+  padding: 2vh 2vw;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
-  font-size: 2rem;
   border-radius: 15px;
+  font-size: 1.2rem;
   cursor: pointer;
+  bottom: 30%;
   opacity: 0.9;
   transition: all 0.3s ease;
 }
@@ -826,50 +837,44 @@ div .tab {
   opacity: 1;
 }
 
-@media (max-width: 1080px){
+@media (max-width: 1080px) {
   .careers-overlay h1 {
     font-size: 2rem;
   }
 
   .careers-overlay p {
-    font-size: 0.9rem;
-  }
-
-} 
-
-
-@media (max-width: 768px) {
-  .careers-overlay h1 {
-    font-size: 1.5rem;
-  }
-
-  .careers-overlay p {
     font-size: 1rem;
-  }
-
-  .careers-button {
-    font-size: 1rem;
-    padding: 10px 15px;
-    bottom: 5px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .careers-overlay h1 {
     font-size: 1.2rem;
-    margin: 0;
-
   }
 
   .careers-overlay p {
-    font-size: 0.7rem;
-    padding: 0;
+    font-size: 0.8rem;
   }
 
   .careers-button {
-    font-size: 12px;
+    font-size: 0.8rem;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  .careers-overlay h1 {
+    font-size: 0.6rem;
+    margin: 0;
+  }
+
+  .careers-overlay p {
+    font-size: 0.4rem;
+  }
+
+  .careers-button {
+    font-size: 0.3rem;
     padding: 8px 12px;
-    
   }
 }
 
@@ -1084,4 +1089,76 @@ div .tab {
 .partner-logos img {
   width: 100px;
   height: auto;
+}
+
+
+/* Contact Us PAGE */
+.contact-section-c {
+  padding:  5vh 0;
+  background-color: #f8fbff;
+  text-align: center;
+}
+
+.contact-section-c > h2{
+  font-size: 2.5rem;
+}
+.container-c {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 20px;
+}
+.contact-info-c, .contact-form-c {
+  background: #fff;
+  padding: 2vw;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  max-width: 90vw;
+  margin: 10px;
+}
+.contact-info-c {
+  background: #007bff;
+  color: white;
+}
+.contact-info-c h2, .contact-form-c h2 {
+  margin-bottom: 15px;
+}
+.contact-info-c p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.info-item-c {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.info-item-c img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+.contact-form-c input, .contact-form-c textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.contact-form-c button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 10vw;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .container-c {
+      flex-direction: column;
+      align-items: center;
+  }
+  .contact-info-c, .contact-form-c {
+      width: 100%;
+  }
 }

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+    <style>
+    .careers-home {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* Ensure full height */
+      }
+      
+      .careers-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+      }
+      
+      .careers-background-image {
+        display: block;
+        width: 70%; /* Reduce the size of the image */
+        height: auto;
+        max-width: 100%;
+        margin: auto;
+      }
+      
+      .careers-overlay {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center it */
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        text-align: left;
+        padding-left: 15vw;
+        width: 80%;
+      }
+      
+      .careers-overlay h1 {
+        margin: 0;
+        font-size: 3rem; /* Adjust for better fit */
+        color: #adcaf1;
+      }
+      
+      .careers-overlay p {
+        margin: 0.5rem 0 0 0;
+        font-size: 1.5rem;
+        padding: 0;
+      }
+      
+      .careers-button {
+        position: relative; /* Remove absolute positioning */
+        margin-top: 20px; /* Add spacing */
+        padding: 2vh 2vw;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        bottom: 30%;
+        opacity: 0.9;
+        transition: all 0.3s ease;
+      }
+      
+      .careers-button:hover {
+        background-color: #0056b3;
+        opacity: 1;
+      }
+      
+      @media (max-width: 1080px) {
+        .careers-overlay h1 {
+          font-size: 2rem;
+        }
+      
+        .careers-overlay p {
+          font-size: 1rem;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .careers-overlay h1 {
+          font-size: 1.2rem;
+        }
+      
+        .careers-overlay p {
+          font-size: 0.8rem;
+        }
+      
+        .careers-button {
+          font-size: 0.8rem;
+          padding: 10px 15px;
+        }
+      }
+      
+      @media (max-width: 550px) {
+        .careers-overlay h1 {
+          font-size: 0.6rem;
+          margin: 0;
+        }
+      
+        .careers-overlay p {
+          font-size: 0.4rem;
+        }
+      
+        .careers-button {
+          font-size: 0.3rem;
+          padding: 8px 12px;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="careers-home">
+      <div class="careers-container">
+        <!-- Background Image -->
+        <img
+          src="/assest/Image-Careers.png"
+          alt="Background Image"
+          class="careers-background-image"
+        />
+
+        <!-- Heading and Subtext Overlay -->
+        <div class="careers-overlay">
+          <h1>Careers at Deliosys</h1>
+          <p>
+            We invite you to supercharge your potential.Find what inspires
+            <br />
+            and drives you. Find your spark.
+          </p>
+        </div>
+
+        <!-- Button -->
+        <button
+          class="careers-button"
+          onclick="window.location.href='careers.html'"
+        >
+          Visit our Careers page
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
